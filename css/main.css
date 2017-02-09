@@ -1,0 +1,27 @@
+﻿.left-nav{
+	height:100%;
+	background-color:burlywood;
+}
+
+.title-nav{
+	font-size:large;
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	text-align:center;
+	padding:10px;
+}
+
+.up{
+	z-index:2000;
+	position:absolute;
+	left:110%;
+	top:10%;
+
+}
+
+.down{
+	z-index:2000;
+	position:absolute;
+	left:110%;
+	top:20%;
+
+}

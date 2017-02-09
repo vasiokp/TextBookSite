@@ -2,24 +2,56 @@
 <head>
 	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/theme/white.css">
+	<link href="css/bootstrap.css" rel="stylesheet" />
+	<link href="css/main.css" rel="stylesheet" />
 </head>
 <body>
-	<div class="reveal">
-		<div class="slides">
-			<section>
-				<span style="position:absolute">some text</span>
-			<img src="img/sistemne-prog/Слайд1.PNG" />
-			
-			
-			</section>
-			<section>Slide 2
-				<img src="img/sistemne-prog/Слайд2.PNG" />
-			</section>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-2">
+				<div class="left-nav">
+					<span class="title-nav">Слайди:</span>
+					<ul>
+						<li><a href="#/1">Link</a></li>
+						<li><a href="#/2">Link2</a></li>
+					</ul>
+					
+						<button class="navigate-prev btn btn-default up">Попереднiй</button>
+						<button class="navigate-next btn btn-default down">Наступний</button>
+					
+				</div>
+			</div>
+			<div class="col-sm-10">
+				<div class="reveal">
+					<div class="slides">
+						<section>
+							<section id="1">
+								<img src="img/sistemne-prog/Слайд1.PNG" />
+							</section>
+							<section id="2">
+								<img src="img/sistemne-prog/Слайд2.PNG" />
+							</section>
+							<section id="3">
+								<img src="img/sistemne-prog/Слайд3.PNG" />
+							</section>
+							<section id="4">
+								<img src="img/sistemne-prog/Слайд4.PNG" />
+							</section>
+						</section>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<script src="js/reveal.js"></script>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="css/bootstrap.js"></script>
 	<script>
-            Reveal.initialize();
+
+		Reveal.initialize(
+			{
+				controls: false,
+			});
 	</script>
 </body>
 </html>
