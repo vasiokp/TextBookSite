@@ -17,10 +17,11 @@
 					maxScale: 1,
 					width: 1000,
 					height: 800,
-					controls: false,
+					controls: true,
 					mouseWheel: false,
 				}
 			);
 		}, 300);
 	}
+
 })();

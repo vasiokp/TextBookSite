@@ -1,17 +1,12 @@
 ﻿<div>
 	<div class="reveal">
 	<div class="slides">
-		<section>
-			<section id="{{$index}}" ng-repeat="slide in slidesSistemneT1">
+		<section ng-repeat="i in getNumber(countTopics) track by $index">
+			{{column=$index}}
+			<section id="{{$index}}" ng-repeat="slide in topics[column].Slides">
 				<img src="{{slide}}" />
 			</section>
 		</section>
-		<section>
-			<section id="{{$index}}" ng-repeat="slide in slidesSistemneT2">
-				<img src="{{slide}}" />
-			</section>
-		</section>
-
 	</div>
 	</div>
 

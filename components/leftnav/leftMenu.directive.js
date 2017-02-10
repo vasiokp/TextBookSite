@@ -13,24 +13,26 @@
 		}
 	}
 
-	function leftMenuCtrl($scope, $rootScope,$timeout) {
-		$rootScope.currentTopic = 1;
-		$rootScope.currentSlide = 1;
+	function leftMenuCtrl($scope, $rootScope, $timeout) {
+		$rootScope.countTopics = 3;
+		$rootScope.currentTopic = 0;
+		$rootScope.currentSlide = 0;
 		$rootScope.lastSlide = $rootScope.slidesCountT1
 
 		$scope.selectTopic = function (i) {
+
 			$rootScope.currentTopic = i;
 			$rootScope.currentSlide = 1;
-			if (i == 1) {
-				$rootScope.lastSlide = $rootScope.slidesCountT1
-				Reveal.slide(0, 0);
-			}
-			if (i == 2) {
-				Reveal.slide(1, 0);
-				$rootScope.lastSlide = $rootScope.slidesCountT2;
-			}
-		
+			Reveal.slide($rootScope.currentTopic, 0);
+			$rootScope.lastSlide = $rootScope.topics[$rootScope.currentTopic].Slides.length;
+			console.log($rootScope.currentTopic);
+			console.log($rootScope.topics[$rootScope.currentTopic]);
+
 		}
+
+			$scope.getNumber = function (num) {
+				return new Array(num);
+			}
 
 	}
 

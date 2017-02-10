@@ -1,5 +1,8 @@
 ﻿<div>
 <span class="title-nav">Теми:</span>
-<span class="topic-element navigate-left" ng-class="{'topic-element-hover' : currentTopic == 1}" ng-click="selectTopic(1)">Тема 1: Розробка мовних процесорів мов програмування</span>
-<span class="topic-element navigate-right" ng-class="{'topic-element-hover' : currentTopic == 2}" ng-click="selectTopic(2)">Тема 2. Елементи теорії формальних мов</span>
-</div>
+	<div ng-repeat="topic in topics">
+		<span class="topic-elemen" ng-class="{'topic-element-hover' : currentTopic == $index}" ng-click="selectTopic($index)">{{'Тема '+$index+'.'+ topic.a1}}</span>
+		<!--<span class="topic-element navigate-left" ng-class="{'topic-element-hover' : currentTopic == 1}" ng-click="selectTopic(1)">Тема 1: Розробка мовних процесорів мов програмування</span>
+		<span class="topic-element navigate-right" ng-class="{'topic-element-hover' : currentTopic == 2}" ng-click="selectTopic(2)">Тема 2. Елементи теорії формальних мов</span>
+		<span class="topic-element navigate-right" ng-class="{'topic-element-hover' : currentTopic == 2}" ng-click="selectTopic(2)">Тема 2. Елементи теорії формальних мов</span>-->
+	</div></div>

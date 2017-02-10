@@ -15,16 +15,30 @@
 	}
 
 	function slidesCtrl($scope, $rootScope,$timeout) {
+		$rootScope.topics = [];
 		$scope.slidesSistemneT1 = [];
 		$scope.slidesSistemneT2 = [];
+		$scope.slidesSistemneT3 =[];
 
-		for (var i = 0; i < 24; i++) {
-			$scope.slidesSistemneT1[i] = 'img/sistemne-prog/tema1/Слайд' + (i + 1) + '.PNG';
-		}
-		for (var i = 0; i < 28; i++) {
-			$scope.slidesSistemneT2[i] = 'img/sistemne-prog/tema2/Слайд' + (i + 1) + '.PNG';
+		$rootScope.slides = [];
+
+		function initSlides(count, topicNum) {
+			var slides =[];
+			for (var i = 0; i < count; i++) {
+				slides[i] = 'img/sistemne-prog/tema' + topicNum + '/Слайд' + (i + 1) + '.PNG';
+			}
+			var topic = {
+				Name : 'Тема '+ topicNum+'.',
+				Slides: slides
+			}
+			$rootScope.topics.push(topic);
 		}
 
+		initSlides(24, 1);
+		initSlides(28, 2);
+		initSlides(14, 3);
+
+		console.log($rootScope.topics);
 		$rootScope.slidesCountT2 = angular.copy($scope.slidesSistemneT2.length);
 		$rootScope.slidesCountT1 = angular.copy($scope.slidesSistemneT1.length);
 		$rootScope.lastSlide = angular.copy($scope.slidesSistemneT1.length);
