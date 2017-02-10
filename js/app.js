@@ -18,7 +18,7 @@
 					width: 1000,
 					height: 800,
 					controls: false,
-					mouseWheel: true,
+					mouseWheel: false,
 				}
 			);
 		}, 300);

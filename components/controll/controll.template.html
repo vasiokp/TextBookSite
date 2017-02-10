@@ -1,5 +1,5 @@
 ﻿<div>
-		<button class="btn btn-default" ng-click="prewSlide()" ng-disabled="currentSlide == 1">Попереднiй</button>
-		<input type="number" class="form-control" ng-model="currentSlide" ng-change="goToSlide(currentSlide)"/>
-		<button class="btn btn-default" ng-click="nextSlide()" ng-disabled="currentSlide >= lastSlide">Наступний</button>
+		<button class="btn btn-default up" ng-click="prewSlide()" ng-disabled="currentSlide == 1">Попереднiй</button>
+		<input type="number" class="form-control currentSlideInput" ng-model="currentSlide" ng-change="goToSlide(currentSlide)"/>
+		<button class="btn btn-default down" ng-click="nextSlide()" ng-disabled="currentSlide >= lastSlide">Наступний</button>
 </div>
