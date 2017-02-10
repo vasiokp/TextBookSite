@@ -33,8 +33,9 @@ html{
 
 .topic-element{
 	display:block;
-	padding:10px;
+	padding:7px;
 	font-weight:700;
+	margin: 5px;
 }
 
 .topic-element:hover{

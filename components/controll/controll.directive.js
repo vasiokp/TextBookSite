@@ -17,17 +17,23 @@
 		$rootScope.currentSlide = 1;
 
 		$scope.goToSlide = function (slide) {
-			Reveal.slide(1,slide-1);
+			Reveal.slide($rootScope.currentTopic-1, slide - 1);
 		}
 
 		$scope.nextSlide = function () {
-			if ($rootScope.currentSlide < $rootScope.slidesCountT1)
+
+			if ($rootScope.currentSlide < $rootScope.lastSlide) {
 				$rootScope.currentSlide++;
+				Reveal.slide($rootScope.currentTopic-1, $rootScope.currentSlide-1);
+			}
+			
 		}
 
 		$scope.prewSlide = function () {
-			if ($rootScope.currentSlide > 1)
+			if ($rootScope.currentSlide > 1) {
 				$rootScope.currentSlide--;
+				Reveal.slide($rootScope.currentTopic - 1, $rootScope.currentSlide-1);
+			}
 		}
 	}
 
