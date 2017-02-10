@@ -16,22 +16,30 @@
 
 	function slidesCtrl($scope, $rootScope,$timeout) {
 		$rootScope.topics = [];
+		$rootScope.countTopics = 3;
+
 		$scope.slidesSistemneT1 = [];
 		$scope.slidesSistemneT2 = [];
 		$scope.slidesSistemneT3 =[];
+		var topicsName = [];
+		topicsName[0] = 'Розробка мовних процесорів мов програмування';
+		topicsName[1] = 'Елементи теорії формальних мов';
+		topicsName[2] = 'Регулярні множини';
+
 
 		$rootScope.slides = [];
 
 		function initSlides(count, topicNum) {
-			var slides =[];
-			for (var i = 0; i < count; i++) {
-				slides[i] = 'img/sistemne-prog/tema' + topicNum + '/Слайд' + (i + 1) + '.PNG';
-			}
-			var topic = {
-				Name : 'Тема '+ topicNum+'.',
-				Slides: slides
-			}
-			$rootScope.topics.push(topic);
+
+				var slides =[];
+				for (var i = 0; i < count; i++) {
+					slides[i] = 'img/sistemne-prog/tema' + topicNum + '/Слайд' + (i + 1) + '.PNG';
+				}
+				var topic = {
+					Name: 'Тема ' + topicNum + '. ' + topicsName[topicNum-1],
+					Slides: slides
+				}
+				$rootScope.topics.push(topic);
 		}
 
 		initSlides(24, 1);

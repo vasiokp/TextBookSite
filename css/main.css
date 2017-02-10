@@ -45,10 +45,11 @@ html{
 
 
 .topic-element{
-	display:block;
 	padding:7px;
 	font-weight:700;
 	margin: 5px;
+	display:block;
+
 }
 
 .topic-element:hover{
@@ -57,5 +58,7 @@ html{
 }
 
 .topic-element-hover{
-	background-color:#f2f2f2!important;
+	display:block;
+	background-color:#f2f2f2;
+
 }

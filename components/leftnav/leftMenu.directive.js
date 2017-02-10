@@ -14,7 +14,6 @@
 	}
 
 	function leftMenuCtrl($scope, $rootScope, $timeout) {
-		$rootScope.countTopics = 3;
 		$rootScope.currentTopic = 0;
 		$rootScope.currentSlide = 0;
 		$rootScope.lastSlide = $rootScope.slidesCountT1
