@@ -6,53 +6,28 @@
 	<link href="css/bootstrap.css" rel="stylesheet" />
 	<link href="css/main.css" rel="stylesheet" />
 </head>
-<body>
+<body ng-app="TextBookApp" ng-cloak>
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-sm-2">
-				<div class="left-nav">
-					<span class="title-nav">Слайди:</span>
-					<ul>
-						<li><a href="#/1">Link</a></li>
-						<li><a href="#/2">Link2</a></li>
-					</ul>
-					
-						<button class="navigate-prev btn btn-default up">Попереднiй</button>
-						<button class="navigate-next btn btn-default down">Наступний</button>
-					
-				</div>
+			<div class="col-sm-1 left-nav">
+				<left-menu></left-menu>
 			</div>
 			<div class="col-sm-10">
-				<div class="reveal">
-					<div class="slides">
-						<section>
-							<section id="1">
-								<img src="img/sistemne-prog/Слайд1.PNG" />
-							</section>
-							<section id="2">
-								<img src="img/sistemne-prog/Слайд2.PNG" />
-							</section>
-							<section id="3">
-								<img src="img/sistemne-prog/Слайд3.PNG" />
-							</section>
-							<section id="4">
-								<img src="img/sistemne-prog/Слайд4.PNG" />
-							</section>
-						</section>
-					</div>
-				</div>
+				<slides></slides>
 			</div>
 		</div>
 	</div>
-	<script src="js/reveal.js"></script>
-	<script src="js/jquery-3.1.1.min.js"></script>
-	<script src="css/bootstrap.js"></script>
-	<script>
 
-		Reveal.initialize(
-			{
-				controls: false,
-			});
-	</script>
+	<script src="js/libs/angular.min.js"></script>
+	<script src="js/libs/angular-material.min.js"></script>\
+
+	<script src="js/app.js"></script>
+
+	<script src="components/content/slides.directive.js"></script>
+	<script src="components/leftnav/leftMenu.directive.js"></script>
+	<script src="js/libs/reveal.js"></script>
+	<script src="js/libs/jquery-3.1.1.min.js"></script>
+	<script src="css/bootstrap.js"></script>
+
 </body>
 </html>
