@@ -19,10 +19,10 @@
 		$scope.slidesSistemneT2 = [];
 
 		for (var i = 0; i < 24; i++) {
-			$scope.slidesSistemneT1[i] = '../../img/sistemne-prog/tema1/Слайд' + (i + 1) + '.PNG';
+			$scope.slidesSistemneT1[i] = 'img/sistemne-prog/tema1/Слайд' + (i + 1) + '.PNG';
 		}
 		for (var i = 0; i < 28; i++) {
-			$scope.slidesSistemneT2[i] = '../../img/sistemne-prog/tema2/Слайд' + (i + 1) + '.PNG';
+			$scope.slidesSistemneT2[i] = 'img/sistemne-prog/tema2/Слайд' + (i + 1) + '.PNG';
 		}
 
 		$rootScope.slidesCountT2 = angular.copy($scope.slidesSistemneT2.length);
