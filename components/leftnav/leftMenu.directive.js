@@ -14,7 +14,12 @@
 	}
 
 	function leftMenuCtrl($scope, $rootScope) {
-		console.log('leftmeny work!!)')
+		$rootScope.currentTopic = 1;
+		//Reveal.slide(1, 1);
+		$scope.selectTopic = function (i) {
+			$rootScope.currentTopic = i;
+			$rootScope.currentSlide = 1;
+		}
 	}
 
 })(angular.module('TextBookApp'));

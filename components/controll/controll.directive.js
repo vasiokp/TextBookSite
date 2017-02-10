@@ -14,20 +14,20 @@
 	}
 
 	function controllCtrl($scope, $rootScope) {
-		$scope.currentSlide = 1;
+		$rootScope.currentSlide = 1;
 
 		$scope.goToSlide = function (slide) {
 			Reveal.slide(1,slide-1);
 		}
 
 		$scope.nextSlide = function () {
-			if ($scope.currentSlide < $rootScope.slidesCount) 
-				$scope.currentSlide++;
+			if ($rootScope.currentSlide < $rootScope.slidesCountT1)
+				$rootScope.currentSlide++;
 		}
 
 		$scope.prewSlide = function () {
-			if ($scope.currentSlide > 1)
-				$scope.currentSlide--;
+			if ($rootScope.currentSlide > 1)
+				$rootScope.currentSlide--;
 		}
 	}
 

@@ -16,11 +16,18 @@
 
 	function slidesCtrl($scope, $rootScope,$timeout) {
 		console.log('Slides directive');
-		$scope.slidesSistemne = [];
+		$scope.slidesSistemneT1 = [];
+		$scope.slidesSistemneT2 = [];
+
 		for (var i = 0; i <= 23; i++) {
-			$scope.slidesSistemne[i] = '../../img/sistemne-prog/Слайд' + (i+1) + '.PNG';
+			$scope.slidesSistemneT1[i] = '../../img/sistemne-prog/tema1/Слайд' + (i + 1) + '.PNG';
 		}
-		$rootScope.slidesCount = angular.copy($scope.slidesSistemne.length);
+		for (var i = 0; i <= 28; i++) {
+			$scope.slidesSistemneT2[i] = '../../img/sistemne-prog/tema2/Слайд' + (i + 1) + '.PNG';
+		}
+		$rootScope.slidesCountT1 = angular.copy($scope.slidesSistemneT1.length);
+		$rootScope.slidesCountT2 = angular.copy($scope.slidesSistemneT2.length);
+		console.log($rootScope.currentTopic);
 
 	}
 
