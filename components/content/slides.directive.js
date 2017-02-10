@@ -1,6 +1,4 @@
-﻿var Reveal;
-
-(function (app) {
+﻿(function (app) {
 	'use strict';
 	app.directive('slides', slides);
 	app.controller('slidesCtrl', slidesCtrl);
@@ -22,14 +20,7 @@
 		for (var i = 0; i <= 23; i++) {
 			$scope.slidesSistemne[i] = '../../img/sistemne-prog/Слайд' + (i+1) + '.PNG';
 		}
-		console.log($scope.slidesSistemne);
-		$timeout(function() {
-		Reveal.initialize(
-			{
-				controls: false,
-			}
-		);
-		}, 300);
+		$rootScope.slidesCount = angular.copy($scope.slidesSistemne.length);
 
 	}
 

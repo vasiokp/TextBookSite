@@ -14,7 +14,7 @@
 	}
 
 	function leftMenuCtrl($scope, $rootScope) {
-		console.log('It work!!)')
+		console.log('leftmeny work!!)')
 	}
 
 })(angular.module('TextBookApp'));
