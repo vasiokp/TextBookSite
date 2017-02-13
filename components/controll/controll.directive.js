@@ -24,15 +24,15 @@
 
 			if ($rootScope.currentSlide < $rootScope.lastSlide) {
 				$rootScope.currentSlide++;
-				Reveal.slide($rootScope.currentTopic-1, $rootScope.currentSlide-1);
+				Reveal.slide($rootScope.currentTopic, $rootScope.currentSlide-1);
 			}
 			
 		}
 
 		$scope.prewSlide = function () {
-			if ($rootScope.currentSlide > 1) {
+			if ($rootScope.currentSlide > 0) {
 				$rootScope.currentSlide--;
-				Reveal.slide($rootScope.currentTopic - 1, $rootScope.currentSlide-1);
+				Reveal.slide($rootScope.currentTopic, $rootScope.currentSlide-1);
 			}
 		}
 	}
