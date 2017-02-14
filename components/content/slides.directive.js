@@ -23,9 +23,6 @@
 		topicsName[1] = 'Елементи теорії формальних мов';
 		topicsName[2] = 'Регулярні множини';
 
-
-		$rootScope.slides = [];
-
 		function initSlides(count, topicNum) {
 
 				var slides =[];

@@ -17,7 +17,6 @@
 		$rootScope.currentTopic = 0;
 		$rootScope.lastSlide = 24 //$rootScope.topics[0].Slides.length;
 
-
 		$scope.selectTopic = function (i) {
 
 			$rootScope.currentTopic = i;
