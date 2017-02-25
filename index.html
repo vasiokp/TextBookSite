@@ -12,7 +12,11 @@
 							mailru.loader.require('api', function () {
 								mailru.connect.init('752318',
 													'83de107fba691d4967a109240fa0d56b');
-								// все готово, здесь можно работать с функциями API
+								mailru.common.photos.get(function (photos_list) {
+									// выведет название первой фотографии из альбома с aid 123
+									alert(photos_list[0].title);
+								}, 1);
+				
 							});
 			</script>
 
