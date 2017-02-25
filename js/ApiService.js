@@ -29,7 +29,9 @@ function gg() {
 	'use strict';
 	console.log("in App");
 	app.controller('ApiConnect', ApiConnect);
-	function ApiConnect($rootScope){
+	function ApiConnect() {
+		console.log("do gg");
+
 		gg();
 		console.log("after gg");
 
