@@ -7,7 +7,7 @@ mailru.loader.require('api', function () {
 		// выведет название первой фотографии из альбома с aid 123
 		console.log(photos_list);
 	}, 1);
-	console.log("in connect");
+	console.log(mailru.session);
 
 
 });
