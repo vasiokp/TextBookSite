@@ -5,9 +5,17 @@
 	<link rel="stylesheet" href="css/theme/black.css">
 	<link href="css/bootstrap.css" rel="stylesheet" />
 	<link href="css/main.css" rel="stylesheet" />
-	<script type="text/javascript" src="http://connect.mail.ru/js/loader.js"></script>
+	<script type="text/javascript" src="https://connect.mail.ru/js/loader.js"></script>
 		</head>
 		<body ng-app="TextBookApp" ng-cloak>
+			<script type="text/javascript">
+					mailru.loader.require('api', function () {
+						mailru.connect.init('752318',
+											'83de107fba691d4967a109240fa0d56b');
+						// все готово, здесь можно работать с функциями API
+					});
+			</script>
+
 
 
 			<div class="container-fluid">
