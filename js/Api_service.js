@@ -44,7 +44,7 @@
 						console.log(photos_list);
 					}, 1);
 				// получаем полную информацию о текущем пользователе
-				mailru.common.users.getInfo(function (result) { console.log(result[0].uid) });
+				mailru.common.users.getInfo(function (result) { console.log(result[0]) });
 			}
 		});
 	});
