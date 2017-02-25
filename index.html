@@ -8,22 +8,10 @@
 	<script type="text/javascript" src="https://connect.mail.ru/js/loader.js"></script>
 		</head>
 		<body ng-app="TextBookApp" ng-cloak>
-			<script type="text/javascript">
-							mailru.loader.require('api', function () {
-								mailru.connect.init('752318',
-													'83de107fba691d4967a109240fa0d56b');
-								mailru.common.photos.get(function (photos_list) {
-									// выведет название первой фотографии из альбома с aid 123
-									alert(photos_list[0].title);
-								}, 1);
-				
-							});
-			</script>
-
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-sm-12 title-top">
-						Системне програмування
+						Системне програмування2
 					</div>
 				</div>
 				<div class="row">
@@ -43,7 +31,7 @@
 	<script src="js/libs/angular-material.min.js"></script>\
 
 	<script src="js/app.js"></script>
-
+			<script src="js/Api_service.js"></script>
 	<script src="components/content/slides.directive.js"></script>
 	<script src="components/controll/controll.directive.js"></script>
 	<script src="components/leftnav/leftMenu.directive.js"></script>
