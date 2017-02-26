@@ -17,11 +17,11 @@
 	function slidesCtrl($scope, $rootScope,$timeout) {
 		$scope.slidesSistemneT1 = [];
 		$scope.slidesSistemneT2 = [];
-		console.log(1);
+		console.log(12);
 		$timeout(function () {
 			console.log($rootScope.photos_list);
 			console.log(2);
-		}, 10);
+		}, 3000);
 		console.log(3);
 
 		for (var i = 0; i < 24; i++) {
