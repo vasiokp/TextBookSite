@@ -17,7 +17,13 @@
 	function slidesCtrl($scope, $rootScope,$timeout) {
 		$scope.slidesSistemneT1 = [];
 		$scope.slidesSistemneT2 = [];
-		console.log($rootScope.photos_list);
+		console.log(1);
+		$timeout(function () {
+			console.log($rootScope.photos_list);
+			console.log(2);
+		}, 300);
+		console.log(3);
+
 		for (var i = 0; i < 24; i++) {
 			$scope.slidesSistemneT1[i] = 'img/sistemne-prog/tema1/Слайд' + (i + 1) + '.PNG';
 		}
