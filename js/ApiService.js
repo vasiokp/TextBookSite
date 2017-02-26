@@ -17,6 +17,14 @@
 
 	function ApiConnectCtrl($rootScope) {
 		console.log('in ctrl');
+		function requests() {
+			mailru.common.photos.getAlbums(function (albums_list) {
+				console.log(albums_list);
+			});
+			mailru.common.photos.get(function (photos_list) {
+				$rootScope.photos_list = photos_list;
+			}, 1);
+		}
 		mailru.loader.require('api', function () {
 
 			mailru.connect.init('752318', '83de107fba691d4967a109240fa0d56b');
@@ -32,12 +40,8 @@
 				if (result.is_app_user != 1) {
 					console.log("no connect To user");
 				} else {
-					mailru.common.photos.get(function (photos_list) {
-						$rootScope.photos_list = photos_list;
-						console.log(photos_list);
-						console.log($rootScope.photos_list);
-					}, 1);
-					mailru.common.users.getInfo(function (result) { console.log(result[0]) });
+					requests();
+						
 				}
 			});
 		});
