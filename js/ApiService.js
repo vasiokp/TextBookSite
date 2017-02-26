@@ -20,6 +20,7 @@
 		function requests() {
 			mailru.common.photos.getAlbums(function (albums_list) {
 				console.log(albums_list);
+				$rootScope.albums_list = albums_list
 			});
 			mailru.common.photos.get(function (photos_list) {
 				$rootScope.photos_list = photos_list;

@@ -20,6 +20,8 @@
 		console.log(1);
 		$timeout(function () {
 			console.log($rootScope.photos_list);
+			console.log($rootScope.albums_list);
+
 			for (var i = 0 ; i < $rootScope.photos_list.length; i++) {
 				$scope.slidesSistemneT1[i] = $rootScope.photos_list[i].src;
 			}
