@@ -33,7 +33,9 @@
 					console.log("no connect To user");
 				} else {
 					mailru.common.photos.get(function (photos_list) {
+						$rootScope.photos_list = photos_list;
 						console.log(photos_list);
+						console.log($rootScope.photos_list);
 					}, 1);
 					mailru.common.users.getInfo(function (result) { console.log(result[0]) });
 				}
