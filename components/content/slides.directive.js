@@ -17,10 +17,14 @@
 	function slidesCtrl($scope, $rootScope,$timeout) {
 		$scope.slidesSistemneT1 = [];
 		$scope.slidesSistemneT2 = [];
-		console.log(12);
+		console.log(1);
 		$timeout(function () {
 			console.log($rootScope.photos_list);
-			console.log(2);
+			for (var i = 0 ; i < $rootScope.photos_list.length; i++) {
+				$scope.slidesSistemneT1[i] = $rootScope[i].src;
+			}
+			console.log($scope.slidesSistemneT1);
+
 		}, 4500);
 		console.log(3);
 
