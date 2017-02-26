@@ -21,7 +21,7 @@
 		$timeout(function () {
 			console.log($rootScope.photos_list);
 			console.log(2);
-		}, 5000);
+		}, 4500);
 		console.log(3);
 
 		for (var i = 0; i < 24; i++) {
