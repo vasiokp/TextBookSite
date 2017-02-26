@@ -21,7 +21,7 @@
 		$timeout(function () {
 			console.log($rootScope.photos_list);
 			for (var i = 0 ; i < $rootScope.photos_list.length; i++) {
-				$scope.slidesSistemneT1[i] = $rootScope[i].src;
+				$scope.slidesSistemneT1[i] = $rootScope.photos_list[i].src;
 			}
 			console.log($scope.slidesSistemneT1);
 
